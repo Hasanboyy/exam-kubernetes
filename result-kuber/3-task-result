@@ -1,0 +1,3 @@
+NAME     READY   STATUS    RESTARTS   AGE     PROJECT=PRACTICE
+nginx1   1/1     Running   0          9m22s   
+nginx2   1/1     Running   0          9m11s   

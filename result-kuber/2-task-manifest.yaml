@@ -1,0 +1,53 @@
+Name:             nginx1
+Namespace:        exam-28
+Priority:         0
+Service Account:  default
+Node:             node3/65.109.14.160
+Start Time:       Wed, 17 Jan 2024 19:07:13 +0500
+Labels:           author=Hasanboy
+                  project=practice
+                  run=nginx1
+Annotations:      <none>
+Status:           Running
+IP:               10.233.68.73
+IPs:
+  IP:  10.233.68.73
+Containers:
+  nginx1:
+    Container ID:   containerd://6317fdbd69f0609e0e42387c6273878aebcfd4bd5b9f70003be0c06612aa6143
+    Image:          nginx
+    Image ID:       docker.io/library/nginx@sha256:4c0fdaa8b6341bfdeca5f18f7837462c80cff90527ee35ef185571e1c327beac
+    Port:           80/TCP
+    Host Port:      0/TCP
+    State:          Running
+      Started:      Wed, 17 Jan 2024 19:07:14 +0500
+    Ready:          True
+    Restart Count:  0
+    Environment:    <none>
+    Mounts:
+      /var/run/secrets/kubernetes.io/serviceaccount from kube-api-access-d689q (ro)
+Conditions:
+  Type              Status
+  Initialized       True 
+  Ready             True 
+  ContainersReady   True 
+  PodScheduled      True 
+Volumes:
+  kube-api-access-d689q:
+    Type:                    Projected (a volume that contains injected data from multiple sources)
+    TokenExpirationSeconds:  3607
+    ConfigMapName:           kube-root-ca.crt
+    ConfigMapOptional:       <nil>
+    DownwardAPI:             true
+QoS Class:                   BestEffort
+Node-Selectors:              <none>
+Tolerations:                 node.kubernetes.io/not-ready:NoExecute op=Exists for 300s
+                             node.kubernetes.io/unreachable:NoExecute op=Exists for 300s
+Events:
+  Type    Reason     Age    From               Message
+  ----    ------     ----   ----               -------
+  Normal  Scheduled  6m22s  default-scheduler  Successfully assigned exam-28/nginx1 to node3
+  Normal  Pulling    6m22s  kubelet            Pulling image "nginx"
+  Normal  Pulled     6m21s  kubelet            Successfully pulled image "nginx" in 814ms (814ms including waiting)
+  Normal  Created    6m21s  kubelet            Created container nginx1
+  Normal  Started    6m21s  kubelet            Started container nginx1
